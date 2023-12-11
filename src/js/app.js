@@ -5,7 +5,7 @@ export default class Validator {
 
   validateUsername() {
     const reg1 = /^[a-z][\w-]*[a-z]$/i;
-    const reg2 = /\d{0,3}/;
-    return reg1.test(this.name) && reg2.test(this.name);
+    const reg2 = /\d{4,}/;
+    return reg1.test(this.name) && !reg2.test(this.name);
   }
 }
